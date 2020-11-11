@@ -16,8 +16,7 @@ async function brainEvenStart() {
   while (correctAnswerCounter < 3) {
     const number = getRandomInt(-1000, 1001);
     const answer = await promptly.prompt(`Question: ${number}`);
-    let isEven = true;
-    if (number % 2 !== 0) isEven = false;
+    const isEven = (number % 2 === 0);
     if ((answer === 'yes' && isEven) || (answer === 'no' && !isEven)) {
       correctAnswerCounter += 1;
       console.log('Correct!');
