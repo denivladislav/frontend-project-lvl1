@@ -4,4 +4,10 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (maxNum - minNum)) + minNum;
 }
 
-export default getRandomInt;
+function getRandomMathSign() {
+  const mathSigns = ['+', '-', '*'];
+  const signIndex = getRandomInt(0, 4);
+  return mathSigns[signIndex];
+}
+
+export { getRandomInt, getRandomMathSign };
