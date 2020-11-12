@@ -4,7 +4,7 @@ import { getRandomInt, getRandomMathSign, correctAnswerNumber } from '../index.j
 async function brainCalcStart() {
   console.log('Welcome to the Brain Games!');
   const name = await promptly.prompt('May i have your name?: ');
-  console.log(`Hello, ${name}!\nWhat is the result of the expression?.`);
+  console.log(`Hello, ${name}!\nWhat is the result of the expression?`);
   let correctAnswerCounter = 0;
 
   while (correctAnswerCounter < correctAnswerNumber) {
