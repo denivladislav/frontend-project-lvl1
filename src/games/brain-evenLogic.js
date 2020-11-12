@@ -1,5 +1,5 @@
 import promptly from 'promptly';
-import { getRandomInt, correctAnswerNumber } from '../index.js';
+import { getRandomInt, correctAnswerAmount } from '../index.js';
 
 async function brainEvenStart() {
   console.log('Welcome to the Brain Games!');
@@ -7,7 +7,7 @@ async function brainEvenStart() {
   console.log(`Hello, ${name}!\nAnswer "yes" if the number is even, otherwise answer "no".`);
   let correctAnswerCounter = 0;
 
-  while (correctAnswerCounter < correctAnswerNumber) {
+  while (correctAnswerCounter < correctAnswerAmount) {
     const number = getRandomInt(-1000, 1001);
     const answer = await promptly.prompt(`Question: ${number}`);
     console.log(`Your answer: ${answer}`);

@@ -1,4 +1,4 @@
-const correctAnswerNumber = 3;
+const correctAnswerAmount = 3;
 
 function getRandomInt(min, max) {
   const minNum = Math.ceil(min);
@@ -11,4 +11,4 @@ function getRandomMathSign(mathSigns = ['+', '-', '*']) {
   return mathSigns[signIndex];
 }
 
-export { getRandomInt, getRandomMathSign, correctAnswerNumber };
+export { getRandomInt, getRandomMathSign, correctAnswerAmount };

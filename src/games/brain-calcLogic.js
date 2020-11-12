@@ -1,5 +1,5 @@
 import promptly from 'promptly';
-import { getRandomInt, getRandomMathSign, correctAnswerNumber } from '../index.js';
+import { getRandomInt, getRandomMathSign, correctAnswerAmount } from '../index.js';
 
 async function brainCalcStart() {
   console.log('Welcome to the Brain Games!');
@@ -7,7 +7,7 @@ async function brainCalcStart() {
   console.log(`Hello, ${name}!\nWhat is the result of the expression?`);
   let correctAnswerCounter = 0;
 
-  while (correctAnswerCounter < correctAnswerNumber) {
+  while (correctAnswerCounter < correctAnswerAmount) {
     const number1 = getRandomInt(-100, 100);
     const number2 = getRandomInt(0, 100);
     const mathSign = getRandomMathSign();
