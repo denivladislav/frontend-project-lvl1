@@ -1,2 +1,4 @@
 #!/usr/bin/env node
-console.log('This is how i work!');
+import brainCalcStart from '../src/games/brain-calcLogic.js';
+
+brainCalcStart();
