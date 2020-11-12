@@ -22,8 +22,8 @@ async function brainEvenStart() {
       console.log('Correct!');
     } else {
       if (isEven) {
-        console.log('Wrong answer ;(. The correct answer was \'yes\'');
-      } else console.log('Wrong answer ;(. The correct answer was \'no\'');
+        console.log('Wrong answer ;(. The correct answer was \'yes\'.');
+      } else console.log('Wrong answer ;(. The correct answer was \'no\'.');
       console.log(`Let's try again, ${name}!`);
       return null;
     }
