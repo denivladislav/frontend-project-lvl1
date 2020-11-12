@@ -5,6 +5,6 @@
 
 ![Linter](https://github.com/vvvhatislove/frontend-project-lvl1/workflows/Linter/badge.svg)
 
-Asciinema brain-even link: https://asciinema.org/a/TraeoMVTaiaJaB0llK0hvttuP
+Asciinema brain-even link: https://asciinema.org/a/SiRUo8A0wss6tLAeNAERczwyT
 
 Asciinema brain-calc link: https://asciinema.org/a/KMVGVyK2tg74PooJdATcOfYQM
