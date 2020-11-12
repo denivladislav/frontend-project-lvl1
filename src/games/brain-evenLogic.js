@@ -1,5 +1,5 @@
 import promptly from 'promptly';
-import getRandomInt from '../index.js';
+import { getRandomInt } from '../index.js';
 
 async function brainEvenStart() {
   console.log('Welcome to the Brain Games!');
