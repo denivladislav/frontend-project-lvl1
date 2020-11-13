@@ -8,7 +8,7 @@ function showCorrectAnswerMessage() {
   console.log('Correct!');
 }
 
-function showWrongAnswerMessage(answer, correctAnswer, name) {
+function showLoseMessage(answer, correctAnswer, name) {
   console.log(`'${answer}' is a wrong answer ;(. The correct answer was '${correctAnswer}'.\nLet's try again, ${name}!`);
 }
 
@@ -55,7 +55,7 @@ function getGcd(number1, number2) {
 export {
   getRandomInt, getRandomMathSign,
   makeNumericOperation, getGcd,
-  showWrongAnswerMessage, showWinMessage,
+  showLoseMessage, showWinMessage,
   showGreetingMessage, correctAnswerAmount,
   showCorrectAnswerMessage,
 };
