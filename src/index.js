@@ -52,10 +52,30 @@ function getGcd(number1, number2) {
   return a + b;
 }
 
+function getMathProgression(length = getRandomInt(6, 11)) {
+  const diff = getRandomInt(-100, 100);
+  const firstElement = getRandomInt(-100, 100);
+  console.log('length:', length, 'diff:', diff, 'firstElement:', firstElement);
+  const progression = [`${firstElement} `];
+  let nextElement = firstElement;
+  for (let i = 1; i < length; i += 1) {
+    nextElement += diff;
+    progression.push(`${nextElement} `);
+  }
+  return progression;
+}
+
+function hideProgressionElement(progression, index = 0) {
+  const clonedProgression = progression.slice(0);
+  clonedProgression[index] = '.. ';
+  return clonedProgression;
+}
+
 export {
   getRandomInt, getRandomMathSign,
   makeNumericOperation, getGcd,
   showLoseMessage, showWinMessage,
   showGreetingMessage, correctAnswerAmount,
-  showCorrectAnswerMessage,
+  showCorrectAnswerMessage, getMathProgression,
+  hideProgressionElement,
 };
