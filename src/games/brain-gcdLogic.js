@@ -11,8 +11,8 @@ async function brainGcdStart() {
   let correctAnswerCounter = 0;
 
   while (correctAnswerCounter < correctAnswerAmount) {
-    const number1 = getRandomInt(-100, 100);
-    const number2 = getRandomInt(-100, 100);
+    const number1 = getRandomInt(0, 100);
+    const number2 = getRandomInt(0, 100);
     const answer = await promptly.prompt(`Question: ${number1} ${number2}`);
     const integerAnswer = Number(answer);
 
