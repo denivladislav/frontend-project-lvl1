@@ -1,8 +1,11 @@
 import promptly from 'promptly';
-import { getRandomInt, getRandomMathSign, correctAnswerAmount } from '../index.js';
+import {
+  getRandomInt, getRandomMathSign, makeNumericOperation,
+  correctAnswerAmount, showWrongAnswerMessage,
+  showWinMessage, showCorrectAnswerMessage,
+} from '../index.js';
 
 async function brainCalcStart() {
-  console.log('Welcome to the Brain Games!');
   const name = await promptly.prompt('May i have your name?: ');
   console.log(`Hello, ${name}!\nWhat is the result of the expression?`);
   let correctAnswerCounter = 0;
@@ -14,33 +17,20 @@ async function brainCalcStart() {
     const answer = await promptly.prompt(`Question: ${number1} ${mathSign} ${number2} =`);
     const integerAnswer = Number(answer);
 
-    console.log(`Your answer: ${integerAnswer}`);
+    console.log(`Your answer: ${answer}`);
 
-    let correctAnswer = 0;
-    switch (mathSign) {
-      case '+':
-        correctAnswer = number1 + number2;
-        break;
-      case '-':
-        correctAnswer = number1 - number2;
-        break;
-      case '*':
-        correctAnswer = number1 * number2;
-        break;
-      default:
-        console.log('Unknown operation.');
-        return null;
-    }
+    const correctAnswer = makeNumericOperation(number1, mathSign, number2);
+
     if (correctAnswer === integerAnswer) {
       correctAnswerCounter += 1;
-      console.log('Correct!');
+      showCorrectAnswerMessage();
     } else {
-      console.log(`Wrong answer ;(. The correct answer was '${correctAnswer}.'\nLet's try again, ${name}!`);
+      showWrongAnswerMessage(answer, correctAnswer, name);
       return null;
     }
   }
 
-  console.log(`Congratulations, ${name}!`);
+  showWinMessage(name);
   return null;
 }
 
