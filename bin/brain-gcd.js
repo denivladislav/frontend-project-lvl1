@@ -1,2 +1,7 @@
 #!/usr/bin/env node
-console.log('I work like this');
+import brainGcdStart from '../src/games/brain-gcdLogic.js';
+import { showGreetingMessage } from '../src/index.js';
+
+showGreetingMessage();
+
+brainGcdStart();
