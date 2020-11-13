@@ -1,7 +1,7 @@
 import promptly from 'promptly';
 import {
   getRandomInt, correctAnswerAmount,
-  showWrongAnswerMessage, showWinMessage,
+  showLoseMessage, showWinMessage,
   showCorrectAnswerMessage,
 } from '../index.js';
 
@@ -20,8 +20,8 @@ async function brainEvenStart() {
       showCorrectAnswerMessage();
     } else {
       if (isEven) {
-        showWrongAnswerMessage(answer, 'yes', name);
-      } else showWrongAnswerMessage(answer, 'no', name);
+        showLoseMessage(answer, 'yes', name);
+      } else showLoseMessage(answer, 'no', name);
       return null;
     }
   }
