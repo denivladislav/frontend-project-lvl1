@@ -1,7 +1,7 @@
 import promptly from 'promptly';
 import {
   getRandomInt, getGcd,
-  correctAnswerAmount, showWrongAnswerMessage,
+  correctAnswerAmount, showLoseMessage,
   showWinMessage, showCorrectAnswerMessage,
 } from '../index.js';
 
@@ -24,7 +24,7 @@ async function brainGcdStart() {
       correctAnswerCounter += 1;
       showCorrectAnswerMessage();
     } else {
-      showWrongAnswerMessage(answer, correctAnswer, name);
+      showLoseMessage(answer, correctAnswer, name);
       return null;
     }
   }

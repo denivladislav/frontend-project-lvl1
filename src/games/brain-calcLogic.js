@@ -1,7 +1,7 @@
 import promptly from 'promptly';
 import {
   getRandomInt, getRandomMathSign, makeNumericOperation,
-  correctAnswerAmount, showWrongAnswerMessage,
+  correctAnswerAmount, showLoseMessage,
   showWinMessage, showCorrectAnswerMessage,
 } from '../index.js';
 
@@ -25,7 +25,7 @@ async function brainCalcStart() {
       correctAnswerCounter += 1;
       showCorrectAnswerMessage();
     } else {
-      showWrongAnswerMessage(answer, correctAnswer, name);
+      showLoseMessage(answer, correctAnswer, name);
       return null;
     }
   }
