@@ -72,7 +72,7 @@ function hideProgressionElement(progression, index = 0) {
 
 function isNumberPrime(number) {
   if (number === 1) {
-    return true;
+    return `${number}: is a special case`;
   }
   const delenie = (x, y) => {
     if (y === 1) {
