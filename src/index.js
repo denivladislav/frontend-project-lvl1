@@ -71,11 +71,30 @@ function hideProgressionElement(progression, index = 0) {
   return clonedProgression;
 }
 
+function isNumberPrime(number) {
+  if (number === 1) {
+    return `${number}: special case`;
+  }
+  const delenie = (x, y) => {
+    if (y === 1) {
+      return true;
+    }
+    if (x % y === 0) {
+      return false;
+    } return delenie(x, y - 1);
+  };
+
+  if (delenie(number, number - 1)) {
+    return true;
+  }
+  return false;
+}
+
 export {
   getRandomInt, getRandomMathSign,
   makeNumericOperation, getGcd,
   showLoseMessage, showWinMessage,
   showGreetingMessage, correctAnswerAmount,
   showCorrectAnswerMessage, getMathProgression,
-  hideProgressionElement,
+  hideProgressionElement, isNumberPrime,
 };
