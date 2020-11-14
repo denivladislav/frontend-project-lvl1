@@ -11,7 +11,7 @@ async function brainPrimeStart() {
   let correctAnswerCounter = 0;
 
   while (correctAnswerCounter < correctAnswerAmount) {
-    const number = getRandomInt(0, 1000);
+    const number = getRandomInt(1, 1000);
     const answer = await promptly.prompt(`Question: ${number}`);
 
     console.log(`Your answer: ${answer}`);
