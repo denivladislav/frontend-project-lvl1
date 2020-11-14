@@ -55,7 +55,6 @@ function getGcd(number1, number2) {
 function getMathProgression(length = getRandomInt(6, 11)) {
   const diff = getRandomInt(-100, 100);
   const firstElement = getRandomInt(-100, 100);
-  console.log('length:', length, 'diff:', diff, 'firstElement:', firstElement);
   const progression = [`${firstElement} `];
   let nextElement = firstElement;
   for (let i = 1; i < length; i += 1) {
