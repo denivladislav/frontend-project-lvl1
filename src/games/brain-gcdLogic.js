@@ -16,7 +16,7 @@ async function brainGcdStart() {
     const answer = await promptly.prompt(`Question: ${number1} ${number2}`);
     const integerAnswer = Number(answer);
 
-    console.log(`Your answer: ${integerAnswer}`);
+    console.log(`Your answer: ${answer}`);
 
     const correctAnswer = getGcd(number1, number2);
 

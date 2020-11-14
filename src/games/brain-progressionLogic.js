@@ -19,7 +19,7 @@ async function brainProgressionStart() {
     const answer = await promptly.prompt(`Question: ${progressionWithHidden.join('')}`);
     const integerAnswer = Number(answer);
 
-    console.log(`Your answer: ${integerAnswer}`);
+    console.log(`Your answer: ${answer}`);
 
     if (integerAnswer === integerHiddenElement) {
       correctAnswerCounter += 1;
