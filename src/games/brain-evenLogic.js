@@ -6,7 +6,7 @@ import {
 } from '../index.js';
 
 async function brainEvenStart() {
-  const name = await promptly.prompt('May i have your name? ');
+  const name = await promptly.prompt('May i have your name?');
   console.log(`Hello, ${name}!\nAnswer "yes" if the number is even, otherwise answer "no".`);
   let correctAnswerCounter = 0;
 

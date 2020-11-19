@@ -6,7 +6,7 @@ import {
 } from '../index.js';
 
 async function brainCalcStart() {
-  const name = await promptly.prompt('May i have your name?: ');
+  const name = await promptly.prompt('May i have your name?');
   console.log(`Hello, ${name}!\nWhat is the result of the expression?`);
   let correctAnswerCounter = 0;
 
