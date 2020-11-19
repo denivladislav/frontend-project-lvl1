@@ -6,7 +6,7 @@ import {
 } from '../index.js';
 
 async function brainPrimeStart() {
-  const name = await promptly.prompt('May i have your name?: ');
+  const name = await promptly.prompt('May i have your name? ');
   console.log(`Hello, ${name}!\nAnswer "yes" if given number is prime. Otherwise answer "no".`);
   let correctAnswerCounter = 0;
 

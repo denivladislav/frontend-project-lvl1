@@ -6,7 +6,7 @@ import {
 } from '../index.js';
 
 async function brainGcdStart() {
-  const name = await promptly.prompt('May i have your name?: ');
+  const name = await promptly.prompt('May i have your name? ');
   console.log(`Hello, ${name}!\nFind the greatest common divisor of given numbers.`);
   let correctAnswerCounter = 0;
 

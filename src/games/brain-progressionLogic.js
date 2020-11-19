@@ -6,7 +6,7 @@ import {
 } from '../index.js';
 
 async function brainProgressionStart() {
-  const name = await promptly.prompt('May i have your name?: ');
+  const name = await promptly.prompt('May i have your name? ');
   console.log(`Hello, ${name}!\nWhat number is missing in the progression?`);
   let correctAnswerCounter = 0;
 
