@@ -1,9 +1,13 @@
-const numberEvenRange = [-1000, 1001];
+const numbersEvenRange = [-1000, 1000];
 
-const numberAmount = 1;
+const numbersEvenAmount = 1;
 
-const brainEvenLogic = (number) => {
-  const isEven = (number % 2 === 0);
+function makeEvenQuestion(numbers) {
+  return numbers[0];
+}
+
+function makeEvenAnswer(numbers) {
+  const isEven = (numbers[0] % 2 === 0);
   let answer;
   if (isEven === true) {
     answer = 'yes';
@@ -12,6 +16,9 @@ const brainEvenLogic = (number) => {
   }
 
   return answer;
-};
+}
 
-export { numberEvenRange, numberAmount, brainEvenLogic };
+export {
+  makeEvenQuestion, makeEvenAnswer,
+  numbersEvenRange, numbersEvenAmount,
+};
