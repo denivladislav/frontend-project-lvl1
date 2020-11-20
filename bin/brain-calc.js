@@ -1,7 +1,11 @@
 #!/usr/bin/env node
-import brainCalcStart from '../src/games/brain-calcLogic.js';
-import { showGreetingMessage } from '../src/index.js';
+import {
+  makeCalcQuestion, makeCalcAnswer,
+  numbersCalcAmount, numbersCalcRange,
+  mathSignsCalcAmount,
+} from '../src/games/brain-calcLogic.js';
 
-showGreetingMessage();
+import { gameStart } from '../src/index.js';
 
-brainCalcStart();
+gameStart(makeCalcQuestion, makeCalcAnswer,
+  numbersCalcAmount, numbersCalcRange, mathSignsCalcAmount);
