@@ -29,20 +29,6 @@ function getRandomMathSign(mathSigns = ['+', '-', '*']) {
   return mathSigns[signIndex];
 }
 
-function makeNumericOperation(number1, mathSign, number2) {
-  switch (mathSign) {
-    case '+':
-      return number1 + number2;
-    case '-':
-      return number1 - number2;
-    case '*':
-      return number1 * number2;
-    default:
-      console.log('Unknown operation.');
-      return null;
-  }
-}
-
 function getGcd(number1, number2) {
   let a = number1;
   let b = number2;
@@ -91,7 +77,8 @@ function isNumberPrime(number) {
   return false;
 }
 
-async function gameStart(numberRange, gameLogic) {
+async function gameStart(makeQuestion, makeAnswer, numbersAmount = 10,
+  numbersRange = [-100, 100], mathSignsAmount = 0) {
   console.log('Welcome to the Brain Games!');
   const name = await promptly.prompt('May i have your name?');
   console.log(`Hello, ${name}!\nAnswer "yes" if the number is even, otherwise answer "no".`);
@@ -99,10 +86,19 @@ async function gameStart(numberRange, gameLogic) {
   let correctAnswerCounter = 0;
 
   while (correctAnswerCounter < correctAnswerAmount) {
-    const number = getRandomInt(numberRange[0], numberRange[1]);
-    const correctAnswer = gameLogic(number);
-
-    const answer = await promptly.prompt(`Question: ${number}`);
+    const numbers = [];
+    const mathSigns = [];
+    for (let i = 0; i < numbersAmount; i += 1) {
+      numbers.push(getRandomInt(numbersRange[0], numbersRange[1]));
+    }
+    if (mathSignsAmount !== 0) {
+      for (let i = 0; i < mathSignsAmount; i += 1) {
+        mathSigns.push(getRandomMathSign());
+      }
+    }
+    const question = makeQuestion(numbers, mathSigns);
+    const correctAnswer = makeAnswer(numbers, mathSigns);
+    const answer = await promptly.prompt(`Question: ${question}`);
 
     console.log(`Your answer: ${answer}`);
     if (answer === correctAnswer) {
@@ -120,7 +116,7 @@ async function gameStart(numberRange, gameLogic) {
 
 export {
   getRandomInt, getRandomMathSign,
-  makeNumericOperation, getGcd,
+  getGcd,
   showLoseMessage, showWinMessage,
   showGreetingMessage, correctAnswerAmount,
   showCorrectAnswerMessage, getMathProgression,
