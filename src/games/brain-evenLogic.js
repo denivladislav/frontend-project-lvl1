@@ -1,35 +1,17 @@
-import promptly from 'promptly';
-import {
-  getRandomInt, correctAnswerAmount,
-  showLoseMessage, showWinMessage,
-  showCorrectAnswerMessage,
-} from '../index.js';
+const numberEvenRange = [-1000, 1001];
 
-async function brainEvenStart() {
-  const name = await promptly.prompt('May i have your name?');
-  console.log(`Hello, ${name}!\nAnswer "yes" if the number is even, otherwise answer "no".`);
-  let correctAnswerCounter = 0;
+const numberAmount = 1;
 
-  while (correctAnswerCounter < correctAnswerAmount) {
-    const number = getRandomInt(-1000, 1001);
-    const answer = await promptly.prompt(`Question: ${number}`);
-
-    console.log(`Your answer: ${answer}`);
-
-    const isEven = (number % 2 === 0);
-    if ((answer === 'yes' && isEven) || (answer === 'no' && !isEven)) {
-      correctAnswerCounter += 1;
-      showCorrectAnswerMessage();
-    } else {
-      if (isEven) {
-        showLoseMessage(answer, 'yes', name);
-      } else showLoseMessage(answer, 'no', name);
-      return null;
-    }
+const brainEvenLogic = (number) => {
+  const isEven = (number % 2 === 0);
+  let answer;
+  if (isEven === true) {
+    answer = 'yes';
+  } else {
+    answer = 'no';
   }
 
-  showWinMessage(name);
-  return null;
-}
+  return answer;
+};
 
-export default brainEvenStart;
+export { numberEvenRange, numberAmount, brainEvenLogic };
