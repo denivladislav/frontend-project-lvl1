@@ -1,3 +1,5 @@
+import promptly from 'promptly';
+
 const correctAnswerAmount = 3;
 
 function showGreetingMessage() {
@@ -89,6 +91,33 @@ function isNumberPrime(number) {
   return false;
 }
 
+async function gameStart(numberRange, gameLogic) {
+  console.log('Welcome to the Brain Games!');
+  const name = await promptly.prompt('May i have your name?');
+  console.log(`Hello, ${name}!\nAnswer "yes" if the number is even, otherwise answer "no".`);
+
+  let correctAnswerCounter = 0;
+
+  while (correctAnswerCounter < correctAnswerAmount) {
+    const number = getRandomInt(numberRange[0], numberRange[1]);
+    const correctAnswer = gameLogic(number);
+
+    const answer = await promptly.prompt(`Question: ${number}`);
+
+    console.log(`Your answer: ${answer}`);
+    if (answer === correctAnswer) {
+      correctAnswerCounter += 1;
+      console.log('Correct!');
+    } else {
+      console.log(`'${answer}' is a wrong answer ;(. The correct answer was '${correctAnswer}'.\nLet's try again, ${name}!`);
+      return null;
+    }
+  }
+
+  console.log(`Congratulations, ${name}!`);
+  return null;
+}
+
 export {
   getRandomInt, getRandomMathSign,
   makeNumericOperation, getGcd,
@@ -96,4 +125,5 @@ export {
   showGreetingMessage, correctAnswerAmount,
   showCorrectAnswerMessage, getMathProgression,
   hideProgressionElement, isNumberPrime,
+  gameStart,
 };
