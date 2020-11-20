@@ -1,7 +1,5 @@
 #!/usr/bin/env node
-import brainEvenStart from '../src/games/brain-evenLogic.js';
-import { showGreetingMessage } from '../src/index.js';
+import { brainEvenLogic, numberEvenRange } from '../src/games/brain-evenLogic.js';
+import { gameStart } from '../src/index.js';
 
-showGreetingMessage();
-
-brainEvenStart();
+gameStart(numberEvenRange, brainEvenLogic);
