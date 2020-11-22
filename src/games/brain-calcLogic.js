@@ -11,11 +11,11 @@ function makeCalcQuestion(numbers, mathSigns) {
 function makeCalcAnswer(numbers, mathSigns) {
   switch (mathSigns[0]) {
     case '+':
-      return String(numbers[0] + numbers[1]);
+      return (numbers[0] + numbers[1]);
     case '-':
-      return String(numbers[0] - numbers[1]);
+      return (numbers[0] - numbers[1]);
     case '*':
-      return String(numbers[0] * numbers[1]);
+      return (numbers[0] * numbers[1]);
     default:
       console.log('Unknown operation.');
       return null;
