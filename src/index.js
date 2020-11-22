@@ -97,7 +97,7 @@ async function gameStart(makeQuestion, makeAnswer, numbersAmount = 10,
       }
     }
     const question = makeQuestion(numbers, mathSigns);
-    const correctAnswer = makeAnswer(numbers, mathSigns);
+    const correctAnswer = String(makeAnswer(numbers, mathSigns));
     const answer = await promptly.prompt(`Question: ${question}`);
 
     console.log(`Your answer: ${answer}`);
