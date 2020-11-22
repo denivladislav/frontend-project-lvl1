@@ -1,7 +1,8 @@
 #!/usr/bin/env node
-import brainGcdStart from '../src/games/brain-gcdLogic.js';
-import { showGreetingMessage } from '../src/index.js';
+import {
+  makeGcdQuestion, makeGcdAnswer,
+  numbersGcdRange, numbersGcdAmount,
+} from '../src/games/brain-gcdLogic.js';
+import { gameStart } from '../src/index.js';
 
-showGreetingMessage();
-
-brainGcdStart();
+gameStart(makeGcdQuestion, makeGcdAnswer, numbersGcdAmount, numbersGcdRange);

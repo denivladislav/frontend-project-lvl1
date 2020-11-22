@@ -1,35 +1,18 @@
-import promptly from 'promptly';
-import {
-  getRandomInt, getGcd,
-  correctAnswerAmount, showLoseMessage,
-  showWinMessage, showCorrectAnswerMessage,
-} from '../index.js';
+import { getGcd } from '../index.js';
 
-async function brainGcdStart() {
-  const name = await promptly.prompt('May i have your name?');
-  console.log(`Hello, ${name}!\nFind the greatest common divisor of given numbers.`);
-  let correctAnswerCounter = 0;
+const numbersGcdRange = [0, 100];
 
-  while (correctAnswerCounter < correctAnswerAmount) {
-    const number1 = getRandomInt(1, 100);
-    const number2 = getRandomInt(1, 100);
-    const answer = await promptly.prompt(`Question: ${number1} ${number2}`);
-    const integerAnswer = Number(answer);
+const numbersGcdAmount = 2;
 
-    console.log(`Your answer: ${answer}`);
-
-    const correctAnswer = getGcd(number1, number2);
-
-    if (correctAnswer === integerAnswer) {
-      correctAnswerCounter += 1;
-      showCorrectAnswerMessage();
-    } else {
-      showLoseMessage(answer, correctAnswer, name);
-      return null;
-    }
-  }
-  showWinMessage(name);
-  return null;
+function makeGcdQuestion(numbers) {
+  return `${numbers[0]} ${numbers[1]}`;
 }
 
-export default brainGcdStart;
+function makeGcdAnswer(numbers) {
+  return getGcd(numbers[0], numbers[1]);
+}
+
+export {
+  makeGcdQuestion, makeGcdAnswer,
+  numbersGcdRange, numbersGcdAmount,
+};
