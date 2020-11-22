@@ -43,7 +43,7 @@ function isNumberPrime(number) {
   return false;
 }
 
-async function gameStart(questionText, makeQuestion, makeAnswer, numbersAmount = 10,
+async function gameStart(questionText = 'Question Text needed', makeQuestion = undefined, makeAnswer = undefined, numbersAmount = 10,
   numbersRange = [-100, 100], mathSignsAmount = 0) {
   console.log('Welcome to the Brain Games!');
   const name = await promptly.prompt('May i have your name?');
