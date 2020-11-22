@@ -1,36 +1,34 @@
-import promptly from 'promptly';
-import {
-  getMathProgression, hideProgressionElement,
-  getRandomInt, correctAnswerAmount, showLoseMessage,
-  showWinMessage, showCorrectAnswerMessage,
-} from '../index.js';
+import { getRandomInt } from '../index.js';
 
-async function brainProgressionStart() {
-  const name = await promptly.prompt('May i have your name?');
-  console.log(`Hello, ${name}!\nWhat number is missing in the progression?`);
-  let correctAnswerCounter = 0;
+const numbersProgressionRange = [-100, 100];
 
-  while (correctAnswerCounter < correctAnswerAmount) {
-    const progression = getMathProgression();
-    const indexOfHiddenElement = getRandomInt(0, progression.length);
-    const hiddenElement = progression[indexOfHiddenElement];
-    const integerHiddenElement = Number(hiddenElement.trim());
-    const progressionWithHidden = hideProgressionElement(progression, indexOfHiddenElement);
-    const answer = await promptly.prompt(`Question: ${progressionWithHidden.join('')}`);
-    const integerAnswer = Number(answer);
+const numbersProgressionAmount = 2;
 
-    console.log(`Your answer: ${answer}`);
-
-    if (integerAnswer === integerHiddenElement) {
-      correctAnswerCounter += 1;
-      showCorrectAnswerMessage();
-    } else {
-      showLoseMessage(answer, integerHiddenElement, name);
-      return null;
-    }
+function makeProgressionQuestion(numbers) {
+  const hiddenElement = numbers[0];
+  const diff = numbers[1];
+  const length = getRandomInt(6, 11);
+  const hiddenElementIndex = getRandomInt(0, length);
+  let firstElement = hiddenElement;
+  if (hiddenElementIndex !== 0) {
+    firstElement = hiddenElement - (hiddenElementIndex) * diff;
   }
-  showWinMessage(name);
-  return null;
+  const progression = [];
+  console.log('firstElement:', firstElement, 'hiddenElement', hiddenElement, 'hiddenElementIndex', hiddenElementIndex, 'diff', diff, 'length', length);
+  let nextElement = firstElement;
+  for (let i = 0; i < length; i += 1) {
+    progression.push(nextElement);
+    nextElement += diff;
+  }
+  progression[hiddenElementIndex] = '..';
+  return progression.join(' ');
 }
 
-export default brainProgressionStart;
+function makeProgessionAnswer(numbers) {
+  return numbers[0];
+}
+
+export {
+  makeProgressionQuestion, makeProgessionAnswer,
+  numbersProgressionAmount, numbersProgressionRange,
+};

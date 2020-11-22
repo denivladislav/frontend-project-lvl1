@@ -1,7 +1,9 @@
 #!/usr/bin/env node
-import brainProgressionStart from '../src/games/brain-progressionLogic.js';
-import { showGreetingMessage } from '../src/index.js';
+import {
+  makeProgressionQuestion, makeProgessionAnswer,
+  numbersProgressionAmount, numbersProgressionRange,
+} from '../src/games/brain-progressionLogic.js';
+import { gameStart } from '../src/index.js';
 
-showGreetingMessage();
-
-brainProgressionStart();
+gameStart(makeProgressionQuestion, makeProgessionAnswer,
+  numbersProgressionAmount, numbersProgressionRange);
