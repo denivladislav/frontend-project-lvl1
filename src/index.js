@@ -2,22 +2,6 @@ import promptly from 'promptly';
 
 const correctAnswerAmount = 3;
 
-function showGreetingMessage() {
-  console.log('Welcome to the Brain Games!');
-}
-
-function showCorrectAnswerMessage() {
-  console.log('Correct!');
-}
-
-function showLoseMessage(answer, correctAnswer, name) {
-  console.log(`'${answer}' is a wrong answer ;(. The correct answer was '${correctAnswer}'.\nLet's try again, ${name}!`);
-}
-
-function showWinMessage(name) {
-  console.log(`Congratulations, ${name}!`);
-}
-
 function getRandomInt(min, max) {
   const minNum = Math.ceil(min);
   const maxNum = Math.floor(max);
@@ -116,10 +100,7 @@ async function gameStart(makeQuestion, makeAnswer, numbersAmount = 10,
 
 export {
   getRandomInt, getRandomMathSign,
-  getGcd,
-  showLoseMessage, showWinMessage,
-  showGreetingMessage, correctAnswerAmount,
-  showCorrectAnswerMessage, getMathProgression,
+  getGcd, getMathProgression,
   hideProgressionElement, isNumberPrime,
   gameStart,
 };
