@@ -1,5 +1,7 @@
 import { getRandomInt } from '../index.js';
 
+const questionProgessionText = 'What number is missing in the progression?';
+
 const numbersProgressionRange = [-100, 100];
 
 const numbersProgressionAmount = 2;
@@ -28,6 +30,7 @@ function makeProgessionAnswer(numbers) {
 }
 
 export {
+  questionProgessionText,
   makeProgressionQuestion, makeProgessionAnswer,
   numbersProgressionAmount, numbersProgressionRange,
 };

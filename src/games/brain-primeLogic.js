@@ -1,5 +1,7 @@
 import { isNumberPrime } from '../index.js';
 
+const questionPrimeText = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
 const numbersPrimeRange = [2, 1000];
 
 const numbersPrimeAmount = 1;
@@ -18,6 +20,7 @@ function makePrimeAnswer(numbers) {
 }
 
 export {
+  questionPrimeText,
   makePrimeQuestion, makePrimeAnswer,
   numbersPrimeAmount, numbersPrimeRange,
 };

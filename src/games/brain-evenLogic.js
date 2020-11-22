@@ -1,3 +1,5 @@
+const questionEvenText = 'Answer "yes" if the number is even, otherwise answer "no".';
+
 const numbersEvenRange = [-1000, 1000];
 
 const numbersEvenAmount = 1;
@@ -19,6 +21,7 @@ function makeEvenAnswer(numbers) {
 }
 
 export {
+  questionEvenText,
   makeEvenQuestion, makeEvenAnswer,
   numbersEvenRange, numbersEvenAmount,
 };

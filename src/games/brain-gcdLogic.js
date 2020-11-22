@@ -1,5 +1,7 @@
 import { getGcd } from '../index.js';
 
+const questionGcdText = 'Find the greatest common divisor of given numbers.';
+
 const numbersGcdRange = [0, 100];
 
 const numbersGcdAmount = 2;
@@ -13,6 +15,7 @@ function makeGcdAnswer(numbers) {
 }
 
 export {
+  questionGcdText,
   makeGcdQuestion, makeGcdAnswer,
   numbersGcdRange, numbersGcdAmount,
 };

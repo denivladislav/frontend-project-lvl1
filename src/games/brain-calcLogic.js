@@ -1,3 +1,5 @@
+const questionCalcText = 'What is the result of the expression?';
+
 const numbersCalcRange = [0, 100];
 
 const numbersCalcAmount = 2;
@@ -23,6 +25,7 @@ function makeCalcAnswer(numbers, mathSigns) {
 }
 
 export {
+  questionCalcText,
   makeCalcQuestion, makeCalcAnswer,
   numbersCalcRange, numbersCalcAmount,
   mathSignsCalcAmount,

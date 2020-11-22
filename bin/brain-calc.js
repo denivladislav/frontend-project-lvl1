@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 import {
+  questionCalcText,
   makeCalcQuestion, makeCalcAnswer,
   numbersCalcAmount, numbersCalcRange,
   mathSignsCalcAmount,
@@ -7,5 +8,5 @@ import {
 
 import { gameStart } from '../src/index.js';
 
-gameStart(makeCalcQuestion, makeCalcAnswer,
+gameStart(questionCalcText, makeCalcQuestion, makeCalcAnswer,
   numbersCalcAmount, numbersCalcRange, mathSignsCalcAmount);

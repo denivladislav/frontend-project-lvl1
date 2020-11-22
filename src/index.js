@@ -43,11 +43,11 @@ function isNumberPrime(number) {
   return false;
 }
 
-async function gameStart(makeQuestion, makeAnswer, numbersAmount = 10,
+async function gameStart(questionText, makeQuestion, makeAnswer, numbersAmount = 10,
   numbersRange = [-100, 100], mathSignsAmount = 0) {
   console.log('Welcome to the Brain Games!');
   const name = await promptly.prompt('May i have your name?');
-  console.log(`Hello, ${name}!\nAnswer "yes" if the number is even, otherwise answer "no".`);
+  console.log(`Hello, ${name}!\n${questionText}`);
 
   let correctAnswerCounter = 0;
 
