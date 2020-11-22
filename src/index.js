@@ -62,16 +62,16 @@ function isNumberPrime(number) {
   if (number === 1) {
     return `${number}: is a special case`;
   }
-  const delenie = (x, y) => {
+  const divisionTo1 = (x, y) => {
     if (y === 1) {
       return true;
     }
     if (x % y === 0) {
       return false;
-    } return delenie(x, y - 1);
+    } return divisionTo1(x, y - 1);
   };
 
-  if (delenie(number, number - 1)) {
+  if (divisionTo1(number, number - 1)) {
     return true;
   }
   return false;

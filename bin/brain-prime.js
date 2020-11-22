@@ -1,7 +1,9 @@
 #!/usr/bin/env node
-import { showGreetingMessage } from '../src/index.js';
-import brainPrimeStart from '../src/games/brain-primeLogic.js';
+import {
+  makePrimeQuestion, makePrimeAnswer,
+  numbersPrimeAmount, numbersPrimeRange,
+} from '../src/games/brain-primeLogic.js';
 
-showGreetingMessage();
+import { gameStart } from '../src/index.js';
 
-brainPrimeStart();
+gameStart(makePrimeQuestion, makePrimeAnswer, numbersPrimeAmount, numbersPrimeRange);
