@@ -14,7 +14,6 @@ function makeProgressionQuestion(numbers) {
     firstElement = hiddenElement - (hiddenElementIndex) * diff;
   }
   const progression = [];
-  console.log('firstElement:', firstElement, 'hiddenElement', hiddenElement, 'hiddenElementIndex', hiddenElementIndex, 'diff', diff, 'length', length);
   let nextElement = firstElement;
   for (let i = 0; i < length; i += 1) {
     progression.push(nextElement);

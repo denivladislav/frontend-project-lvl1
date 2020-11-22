@@ -24,24 +24,6 @@ function getGcd(number1, number2) {
   return a + b;
 }
 
-function getMathProgression(length = getRandomInt(6, 11)) {
-  const diff = getRandomInt(-100, 100);
-  const firstElement = getRandomInt(-100, 100);
-  const progression = [`${firstElement} `];
-  let nextElement = firstElement;
-  for (let i = 1; i < length; i += 1) {
-    nextElement += diff;
-    progression.push(`${nextElement} `);
-  }
-  return progression;
-}
-
-function hideProgressionElement(progression, index = 0) {
-  const clonedProgression = progression.slice(0);
-  clonedProgression[index] = '.. ';
-  return clonedProgression;
-}
-
 function isNumberPrime(number) {
   if (number === 1) {
     return `${number}: is a special case`;
@@ -100,7 +82,5 @@ async function gameStart(makeQuestion, makeAnswer, numbersAmount = 10,
 
 export {
   getRandomInt, getRandomMathSign,
-  getGcd, getMathProgression,
-  hideProgressionElement, isNumberPrime,
-  gameStart,
+  getGcd, isNumberPrime, gameStart,
 };
