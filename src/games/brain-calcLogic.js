@@ -1,32 +1,41 @@
-const questionCalcText = 'What is the result of the expression?';
+import getRandomInt from '../utils.js';
+import gameStart from '../index.js';
 
-const numbersCalcRange = [0, 100];
+const questionText = 'What is the result of the expression?';
 
-const numbersCalcAmount = 2;
-
-const mathSignsCalcAmount = 1;
-
-function makeCalcQuestion(numbers, mathSigns) {
-  return `${numbers[0]} ${mathSigns[0]} ${numbers[1]}`;
+function getRandomMathSign(mathSigns = ['+', '-', '*']) {
+  const signIndex = getRandomInt(0, mathSigns.length);
+  return mathSigns[signIndex];
 }
 
-function makeCalcAnswer(numbers, mathSigns) {
-  switch (mathSigns[0]) {
+function solveMathExpression(number1, mathSign, number2) {
+  switch (mathSign) {
     case '+':
-      return (numbers[0] + numbers[1]);
+      return (number1 + number2);
     case '-':
-      return (numbers[0] - numbers[1]);
+      return (number1 - number2);
     case '*':
-      return (numbers[0] * numbers[1]);
+      return (number1 * number2);
     default:
       console.log('Unknown operation.');
       return null;
   }
 }
 
-export {
-  questionCalcText,
-  makeCalcQuestion, makeCalcAnswer,
-  numbersCalcRange, numbersCalcAmount,
-  mathSignsCalcAmount,
-};
+function makeGameData() {
+  const intRange = [0, 100];
+
+  const number1 = getRandomInt(intRange[0], intRange[1]);
+  const number2 = getRandomInt(intRange[0], intRange[1]);
+  const mathSign = getRandomMathSign();
+
+  const question = `${number1} ${mathSign} ${number2}`;
+  const answer = String(solveMathExpression(number1, mathSign, number2));
+
+  const gameData = [question, answer];
+  return gameData;
+}
+
+export default function gameEvenStart() {
+  return gameStart(questionText, makeGameData);
+}

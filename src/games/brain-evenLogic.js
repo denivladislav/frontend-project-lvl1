@@ -1,4 +1,5 @@
 import getRandomInt from '../utils.js';
+import gameStart from '../index.js';
 
 const questionText = 'Answer "yes" if the number is even, otherwise answer "no".';
 
@@ -15,4 +16,6 @@ function makeGameData() {
   return gameData;
 }
 
-export { questionText, makeGameData };
+export default function gameEvenStart() {
+  return gameStart(questionText, makeGameData);
+}

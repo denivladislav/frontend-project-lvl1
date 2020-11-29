@@ -1,26 +1,38 @@
-import { isNumberPrime } from '../index.js';
+import getRandomInt from '../utils.js';
+import gameStart from '../index.js';
 
-const questionPrimeText = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const questionText = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const numbersPrimeRange = [2, 1000];
+function isPrime(number) {
+  if (number === 1) {
+    return `${number}: is a special case`;
+  }
+  const divisionTo1 = (x, y) => {
+    if (y === 1) {
+      return true;
+    }
+    if (x % y === 0) {
+      return false;
+    } return divisionTo1(x, y - 1);
+  };
 
-const numbersPrimeAmount = 1;
-
-function makePrimeQuestion(numbers) {
-  return numbers[0];
+  if (divisionTo1(number, number - 1)) {
+    return true;
+  }
+  return false;
 }
 
-function makePrimeAnswer(numbers) {
-  let answer;
-  if (isNumberPrime(numbers[0])) {
-    answer = 'yes';
-  } else answer = 'no';
+function makeGameData() {
+  const intRange = [0, 1000];
+  const number = getRandomInt(intRange[0], intRange[1]);
 
-  return answer;
+  const question = String(number);
+  const answer = isPrime(number) ? 'yes' : 'no';
+
+  const gameData = [question, answer];
+  return gameData;
 }
 
-export {
-  questionPrimeText,
-  makePrimeQuestion, makePrimeAnswer,
-  numbersPrimeAmount, numbersPrimeRange,
-};
+export default function gamePrimeStart() {
+  return gameStart(questionText, makeGameData);
+}
