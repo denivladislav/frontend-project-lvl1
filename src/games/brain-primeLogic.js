@@ -26,7 +26,7 @@ function makeGameData() {
   const intRange = [0, 1000];
   const number = getRandomInt(intRange[0], intRange[1]);
 
-  const question = String(number);
+  const question = number;
   const answer = isPrime(number) ? 'yes' : 'no';
 
   const gameData = [question, answer];
