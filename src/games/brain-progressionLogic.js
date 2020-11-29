@@ -1,14 +1,11 @@
-import { getRandomInt } from '../index.js';
+import getRandomInt from '../utils.js';
+import gameStart from '../index.js';
 
-const questionProgessionText = 'What number is missing in the progression?';
+const questionText = 'What number is missing in the progression?';
 
-const numbersProgressionRange = [-100, 100];
-
-const numbersProgressionAmount = 2;
-
-function makeProgressionQuestion(numbers) {
-  const hiddenElement = numbers[0];
-  const diff = numbers[1];
+function makeProgression(number) {
+  const hiddenElement = number;
+  const diff = getRandomInt(0, 100);
   const length = getRandomInt(6, 11);
   const hiddenElementIndex = getRandomInt(0, length);
   let firstElement = hiddenElement;
@@ -25,12 +22,17 @@ function makeProgressionQuestion(numbers) {
   return progression.join(' ');
 }
 
-function makeProgessionAnswer(numbers) {
-  return numbers[0];
+function makeGameData() {
+  const intRange = [-100, 100];
+  const number = getRandomInt(intRange[0], intRange[1]);
+
+  const question = makeProgression(number);
+  const answer = String(number);
+
+  const gameData = [question, answer];
+  return gameData;
 }
 
-export {
-  questionProgessionText,
-  makeProgressionQuestion, makeProgessionAnswer,
-  numbersProgressionAmount, numbersProgressionRange,
-};
+export default function gameProgresstionStart() {
+  return gameStart(questionText, makeGameData);
+}
