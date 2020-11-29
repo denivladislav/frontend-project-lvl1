@@ -9,7 +9,7 @@ function makeGameData() {
   const intRange = [-1000, 1000];
   const number = getRandomInt(intRange[0], intRange[1]);
 
-  const question = String(number);
+  const question = number;
   const answer = isEven(number) ? 'yes' : 'no';
 
   const gameData = [question, answer];
