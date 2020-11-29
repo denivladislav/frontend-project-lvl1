@@ -1,27 +1,18 @@
-const questionEvenText = 'Answer "yes" if the number is even, otherwise answer "no".';
+import getRandomInt from '../utils.js';
 
-const numbersEvenRange = [-1000, 1000];
+const questionText = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const numbersEvenAmount = 1;
+const isEven = (number) => number % 2 === 0;
 
-function makeEvenQuestion(numbers) {
-  return numbers[0];
+function makeGameData() {
+  const intRange = [-1000, 1000];
+  const number = getRandomInt(intRange[0], intRange[1]);
+
+  const question = String(number);
+  const answer = isEven(number) ? 'yes' : 'no';
+
+  const gameData = [question, answer];
+  return gameData;
 }
 
-function makeEvenAnswer(numbers) {
-  const isEven = (numbers[0] % 2 === 0);
-  let answer;
-  if (isEven === true) {
-    answer = 'yes';
-  } else {
-    answer = 'no';
-  }
-
-  return answer;
-}
-
-export {
-  questionEvenText,
-  makeEvenQuestion, makeEvenAnswer,
-  numbersEvenRange, numbersEvenAmount,
-};
+export { questionText, makeGameData };
