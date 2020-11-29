@@ -1,13 +1,12 @@
 import promptly from 'promptly';
 
-const correctAnswerAmount = 3;
-
 async function gameStart(questionText, makeGameData) {
   console.log('Welcome to the Brain Games!');
   const name = await promptly.prompt('May i have your name?');
   console.log(`Hello, ${name}!\n${questionText}`);
 
   let correctAnswerCounter = 0;
+  const correctAnswerAmount = 3;
 
   while (correctAnswerCounter < correctAnswerAmount) {
     const gameData = makeGameData();

@@ -10,7 +10,7 @@ function makeProgression(number) {
   const hiddenElementIndex = getRandomInt(0, length);
   let firstElement = hiddenElement;
   if (hiddenElementIndex !== 0) {
-    firstElement = hiddenElement - (hiddenElementIndex) * diff;
+    firstElement = hiddenElement - hiddenElementIndex * diff;
   }
   const progression = [];
   let nextElement = firstElement;
