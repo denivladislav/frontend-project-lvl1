@@ -18,7 +18,7 @@ function solveMathExpression(number1, mathSign, number2) {
       return (number1 * number2);
     default:
       console.log('Unknown operation.');
-      return null;
+      throw new Error(`Unknown operator: ${mathSign})`);
   }
 }
 
