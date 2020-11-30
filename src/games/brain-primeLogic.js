@@ -23,14 +23,12 @@ function isPrime(number) {
 }
 
 function makeGameData() {
-  const intRange = [0, 1000];
-  const number = getRandomInt(intRange[0], intRange[1]);
+  const number = getRandomInt(0, 1000);
 
   const question = number;
   const answer = isPrime(number) ? 'yes' : 'no';
 
-  const gameData = [question, answer];
-  return gameData;
+  return [question, answer];
 }
 
 export default function gamePrimeStart() {

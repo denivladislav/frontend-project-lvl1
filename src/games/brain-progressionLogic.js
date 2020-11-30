@@ -23,14 +23,12 @@ function makeProgression(number) {
 }
 
 function makeGameData() {
-  const intRange = [-100, 100];
-  const number = getRandomInt(intRange[0], intRange[1]);
+  const number = getRandomInt(-100, 100);
 
   const question = makeProgression(number);
   const answer = String(number);
 
-  const gameData = [question, answer];
-  return gameData;
+  return [question, answer];
 }
 
 export default function gameProgresstionStart() {

@@ -15,16 +15,13 @@ function getGcd(number1, number2) {
 }
 
 function makeGameData() {
-  const intRange = [0, 100];
-
-  const number1 = getRandomInt(intRange[0], intRange[1]);
-  const number2 = getRandomInt(intRange[0], intRange[1]);
+  const number1 = getRandomInt(0, 100);
+  const number2 = getRandomInt(0, 100);
 
   const question = `${number1} ${number2}`;
   const answer = String(getGcd(number1, number2));
 
-  const gameData = [question, answer];
-  return gameData;
+  return [question, answer];
 }
 
 export default function gameEvenStart() {
