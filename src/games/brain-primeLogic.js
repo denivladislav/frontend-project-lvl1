@@ -16,10 +16,7 @@ function isPrime(number) {
     } return divisionTo1(x, y - 1);
   };
 
-  if (divisionTo1(number, number - 1)) {
-    return true;
-  }
-  return false;
+  return divisionTo1(number, number - 1);
 }
 
 function makeGameData() {
