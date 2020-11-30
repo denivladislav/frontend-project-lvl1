@@ -17,7 +17,6 @@ function solveMathExpression(number1, mathSign, number2) {
     case '*':
       return (number1 * number2);
     default:
-      console.log('Unknown operation.');
       throw new Error(`Unknown operator: ${mathSign})`);
   }
 }
