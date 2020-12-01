@@ -1,7 +1,7 @@
 import getRandomInt from '../utils.js';
 import gameStart from '../index.js';
 
-const questionText = 'Find the greatest common divisor of given numbers.';
+const task = 'Find the greatest common divisor of given numbers.';
 
 function getGcd(number1, number2) {
   let a = number1;
@@ -25,5 +25,5 @@ function makeGameData() {
 }
 
 export default function gameEvenStart() {
-  return gameStart(questionText, makeGameData);
+  return gameStart(task, makeGameData);
 }

@@ -1,7 +1,7 @@
 import getRandomInt from '../utils.js';
 import gameStart from '../index.js';
 
-const questionText = 'What is the result of the expression?';
+const task = 'What is the result of the expression?';
 
 function getRandomMathSign(mathSigns = ['+', '-', '*']) {
   const signIndex = getRandomInt(0, mathSigns.length);
@@ -33,5 +33,5 @@ function makeGameData() {
 }
 
 export default function gameEvenStart() {
-  return gameStart(questionText, makeGameData);
+  return gameStart(task, makeGameData);
 }

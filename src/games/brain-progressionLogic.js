@@ -1,7 +1,7 @@
 import getRandomInt from '../utils.js';
 import gameStart from '../index.js';
 
-const questionText = 'What number is missing in the progression?';
+const task = 'What number is missing in the progression?';
 
 function makeProgression(number) {
   const hiddenElement = number;
@@ -32,5 +32,5 @@ function makeGameData() {
 }
 
 export default function gameProgresstionStart() {
-  return gameStart(questionText, makeGameData);
+  return gameStart(task, makeGameData);
 }
