@@ -8,7 +8,7 @@ const getRandomMathSign = (mathSigns = ['+', '-', '*']) => {
   return mathSigns[signIndex];
 };
 
-const solveMathExpression = (number1, mathSign, number2) => {
+const calculateMathExpression = (number1, mathSign, number2) => {
   switch (mathSign) {
     case '+':
       return (number1 + number2);
@@ -27,7 +27,7 @@ const makeGameData = () => {
   const mathSign = getRandomMathSign();
 
   const question = `${number1} ${mathSign} ${number2}`;
-  const answer = String(solveMathExpression(number1, mathSign, number2));
+  const answer = String(calculateMathExpression(number1, mathSign, number2));
 
   return [question, answer];
 };
