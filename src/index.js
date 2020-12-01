@@ -5,10 +5,10 @@ async function gameStart(questionText, makeGameData) {
   const name = await promptly.prompt('May i have your name?');
   console.log(`Hello, ${name}!\n${questionText}`);
 
-  let correctAnswerCounter = 0;
-  const correctAnswerAmount = 3;
+  let correctAnswersCounter = 0;
+  const correctAnswersAmount = 3;
 
-  while (correctAnswerCounter < correctAnswerAmount) {
+  while (correctAnswersCounter < correctAnswersAmount) {
     const gameData = makeGameData();
     const question = gameData[0];
     const correctAnswer = gameData[1];
@@ -16,7 +16,7 @@ async function gameStart(questionText, makeGameData) {
 
     console.log(`Your answer: ${answer}`);
     if (answer === correctAnswer) {
-      correctAnswerCounter += 1;
+      correctAnswersCounter += 1;
       console.log('Correct!');
     } else {
       console.log(`'${answer}' is a wrong answer ;(. The correct answer was '${correctAnswer}'.\nLet's try again, ${name}!`);
