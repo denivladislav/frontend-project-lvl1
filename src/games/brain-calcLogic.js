@@ -1,5 +1,5 @@
 import getRandomInt from '../utils.js';
-import gameStart from '../index.js';
+import playGame from '../index.js';
 
 const task = 'What is the result of the expression?';
 
@@ -33,5 +33,5 @@ function makeGameData() {
 }
 
 export default function gameEvenStart() {
-  return gameStart(task, makeGameData);
+  return playGame(task, makeGameData);
 }
