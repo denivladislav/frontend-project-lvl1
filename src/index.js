@@ -19,7 +19,8 @@ async function gameStart(questionText, makeGameData) {
       correctAnswersCounter += 1;
       console.log('Correct!');
     } else {
-      console.log(`'${answer}' is a wrong answer ;(. The correct answer was '${correctAnswer}'.\nLet's try again, ${name}!`);
+      console.log(`'${answer}' is a wrong answer ;(. The correct answer was '${correctAnswer}'.`);
+      console.log(`Let's try again, ${name}!`);
       return null;
     }
   }
