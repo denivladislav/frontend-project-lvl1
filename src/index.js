@@ -9,9 +9,7 @@ async function gameStart(questionText, makeGameData) {
   const correctAnswersAmount = 3;
 
   while (correctAnswersCounter < correctAnswersAmount) {
-    const gameData = makeGameData();
-    const question = gameData[0];
-    const correctAnswer = gameData[1];
+    const [question, correctAnswer] = makeGameData();
     const answer = await promptly.prompt(`Question: ${question}`);
 
     console.log(`Your answer: ${answer}`);
