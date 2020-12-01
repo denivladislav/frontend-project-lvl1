@@ -3,12 +3,12 @@ import playGame from '../index.js';
 
 const task = 'What is the result of the expression?';
 
-function getRandomMathSign(mathSigns = ['+', '-', '*']) {
+const getRandomMathSign = (mathSigns = ['+', '-', '*']) => {
   const signIndex = getRandomInt(0, mathSigns.length);
   return mathSigns[signIndex];
-}
+};
 
-function solveMathExpression(number1, mathSign, number2) {
+const solveMathExpression = (number1, mathSign, number2) => {
   switch (mathSign) {
     case '+':
       return (number1 + number2);
@@ -19,9 +19,9 @@ function solveMathExpression(number1, mathSign, number2) {
     default:
       throw new Error(`Unknown operator: ${mathSign})`);
   }
-}
+};
 
-function makeGameData() {
+const makeGameData = () => {
   const number1 = getRandomInt(0, 100);
   const number2 = getRandomInt(0, 100);
   const mathSign = getRandomMathSign();
@@ -30,8 +30,6 @@ function makeGameData() {
   const answer = String(solveMathExpression(number1, mathSign, number2));
 
   return [question, answer];
-}
+};
 
-export default function gameEvenStart() {
-  return playGame(task, makeGameData);
-}
+export default () => playGame(task, makeGameData);

@@ -3,7 +3,7 @@ import playGame from '../index.js';
 
 const task = 'What number is missing in the progression?';
 
-function makeProgression(number) {
+const makeProgression = (number) => {
   const hiddenElement = number;
   const diff = getRandomInt(0, 100);
   const length = getRandomInt(6, 11);
@@ -20,17 +20,15 @@ function makeProgression(number) {
   }
   progression[hiddenElementIndex] = '..';
   return progression.join(' ');
-}
+};
 
-function makeGameData() {
+const makeGameData = () => {
   const number = getRandomInt(-100, 100);
 
   const question = makeProgression(number);
   const answer = String(number);
 
   return [question, answer];
-}
+};
 
-export default function gameProgresstionStart() {
-  return playGame(task, makeGameData);
-}
+export default () => playGame(task, makeGameData);

@@ -3,7 +3,7 @@ import playGame from '../index.js';
 
 const task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-function isPrime(number) {
+const isPrime = (number) => {
   if (number === 1) {
     return `${number}: is a special case`;
   }
@@ -17,17 +17,15 @@ function isPrime(number) {
   };
 
   return divisionTo1(number, number - 1);
-}
+};
 
-function makeGameData() {
+const makeGameData = () => {
   const number = getRandomInt(0, 1000);
 
   const question = number;
   const answer = isPrime(number) ? 'yes' : 'no';
 
   return [question, answer];
-}
+};
 
-export default function gamePrimeStart() {
-  return playGame(task, makeGameData);
-}
+export default () => playGame(task, makeGameData);
