@@ -1,5 +1,6 @@
-### Brain-games 
+#### Brain-games 
 Simple math games bundle.
+
 ![Actions Status](https://github.com/vvvhatislove/frontend-project-lvl1/workflows/hexlet-check/badge.svg)
 ![Linter](https://github.com/vvvhatislove/frontend-project-lvl1/workflows/Linter/badge.svg)
 [![Maintainability](https://api.codeclimate.com/v1/badges/1f6e3b1985ef9c74049e/maintainability)](https://codeclimate.com/github/vvvhatislove/frontend-project-lvl1/maintainability)
@@ -24,6 +25,7 @@ $ cd frontend-project-lvl1
 $ npm install
 
 # Run the chosen game (check the commands in games descriptions).
+$ # command
 ```
 
 ## Games
