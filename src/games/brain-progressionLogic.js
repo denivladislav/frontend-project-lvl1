@@ -3,30 +3,36 @@ import playGame from '../index.js';
 
 const task = 'What number is missing in the progression?';
 
-const makeProgression = (number) => {
-  const hiddenElement = number;
-  const diff = getRandomInt(0, 100);
+const makeProgressionData = () => {
   const length = getRandomInt(6, 11);
-  const hiddenElementIndex = getRandomInt(0, length);
-  let firstElement = hiddenElement;
-  if (hiddenElementIndex !== 0) {
-    firstElement = hiddenElement - hiddenElementIndex * diff;
-  }
+  const diff = getRandomInt(-11, 11);
+  const firstElement = getRandomInt(-50, 50);
+  return [length, diff, firstElement];
+};
+
+const makeProgression = () => {
+  const [length, diff, firstElement] = makeProgressionData();
   const progression = [];
+
   let nextElement = firstElement;
   for (let i = 0; i < length; i += 1) {
     progression.push(nextElement);
     nextElement += diff;
   }
-  progression[hiddenElementIndex] = '..';
-  return progression.join(' ');
+  return progression;
+};
+
+const makeQuestion = (progression, hiddenElementIndex) => {
+  const copyOfProgression = progression.slice('');
+  copyOfProgression[hiddenElementIndex] = '..';
+  return copyOfProgression.join(' ');
 };
 
 const makeGameData = () => {
-  const number = getRandomInt(-100, 100);
-
-  const question = makeProgression(number);
-  const answer = String(number);
+  const progression = makeProgression();
+  const hiddenElementIndex = getRandomInt(0, progression.length);
+  const question = makeQuestion(progression, hiddenElementIndex);
+  const answer = String(progression[hiddenElementIndex]);
 
   return [question, answer];
 };
