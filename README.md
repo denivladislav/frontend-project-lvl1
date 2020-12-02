@@ -9,13 +9,15 @@ Simple math games bundle.
 
 <p>
   <a href="#how-to-use">How To Use</a>
+</p>  
+<p>
   <a href="#games">Games  
     <ul>
-      <li>brain-even</li>
-      <li>brain-calc</li>
-      <li>brain-gcd</li>
-      <li>brain-progression</li>
-      <li>brain-prime</li>
+      <li><a href="brain-even">brain-even</a></li>
+      <li><a href="brain-calc">brain-calc</a></li>
+      <li><a href="brain-gcd">brain-gcd</a></li>
+      <li><a href="brain-progression">brain-progression</a></li>
+      <li><a href="brain-prime">brain-prime</a></li>
     </ul>
   </a>
 </p>
