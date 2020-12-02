@@ -19,12 +19,11 @@ async function playGame(task, makeGameData) {
     } else {
       console.log(`'${answer}' is a wrong answer ;(. The correct answer was '${correctAnswer}'.`);
       console.log(`Let's try again, ${name}!`);
-      return null;
+      return;
     }
   }
 
   console.log(`Congratulations, ${name}!`);
-  return null;
 }
 
 export default playGame;
