@@ -7,17 +7,15 @@ Simple math games bundle.
 
 ========================
 
-<p>
-  <a href="#how-to-use">How To Use</a>
-  <a href="#games">Games  
-    <ul>
-      <li href="#brain-even">brain-even</li>
-      <li href="#brain-calc">brain-calc</li>
-      <li href="#brain-gcd">brain-gcd</li>
-      <li href="#brain-progression">brain-progression</li>
-      <li href="#brain-prime">brain-prime</li>
-    </ul>
-  </a>
+<p href="#how-to-use">How To Use</p>
+<p href="#games">Games
+  <ul>
+    <li>brain-even</li>
+    <li>brain-calc</li>
+    <li>brain-gcd</li>
+    <li>brain-progression</li>
+    <li>brain-prime</li>
+  </ul>
 </p>
 
 ## How To Use
