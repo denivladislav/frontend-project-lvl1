@@ -1,14 +1,23 @@
-#### Brain-games 
+# brain-games
 Simple math games bundle.
 
 ![Actions Status](https://github.com/vvvhatislove/frontend-project-lvl1/workflows/hexlet-check/badge.svg)
 ![Linter](https://github.com/vvvhatislove/frontend-project-lvl1/workflows/Linter/badge.svg)
 [![Maintainability](https://api.codeclimate.com/v1/badges/1f6e3b1985ef9c74049e/maintainability)](https://codeclimate.com/github/vvvhatislove/frontend-project-lvl1/maintainability)
 
-======================
+========================
 
 <p>
   <a href="#how-to-use">How To Use</a>
+  <a href="#games">Games  
+    <ul>
+      <li href="#brain-even">brain-even</li>
+      <li href="#brain-calc">brain-calc</li>
+      <li href="#brain-gcd">brain-gcd</li>
+      <li href="#brain-progression">brain-progression</li>
+      <li href="#brain-prime">brain-prime</li>
+    </ul>
+  </a>
 </p>
 
 ## How To Use
@@ -29,6 +38,32 @@ $ # command
 ```
 
 ## Games
+
+### brain-even
+Run this command to start the game:
+```bash
+$ brain-even
+```
+### brain-calc
+Run this command to start the game:
+```bash
+$ brain-calc
+```
+### brain-gcd
+Run this command to start the game:
+```bash
+$ brain-gcd
+```
+### brain-progression
+Run this command to start the game:
+```bash
+$ brain-progression
+```
+### brain-prime
+Run this command to start the game:
+```bash
+$ brain-prime
+```
 
 Asciinema brain-even link: https://asciinema.org/a/ghKKOX45rxr0QfQI5P6DyBpIy
 
