@@ -7,7 +7,7 @@ Simple math games bundle.
 ======================
 
 <p>
-  <a href="#How To Use">How To Use</a>
+  <a href="#how-to-use">How To Use</a>
 </p>
 
 ## How To Use
