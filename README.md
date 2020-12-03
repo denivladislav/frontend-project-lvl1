@@ -89,4 +89,4 @@ This game bundle was created as my first project during my Hexlet "Frontend-deve
 <img align="center" src = "https://cdn2.hexlet.io/assets/hexlet_logo_wide-7e3d6b16dd0882a7657fe79022c2603fdcd53d1744350febc34fba436e282ae7.png" 
 alt="Hexlet logo" width="500" length="500">
 
-<a align="center" href="https://en.hexlet.io/pages/about">About Hexlet</a>
+<p align="right"><a href="https://en.hexlet.io/pages/about">About Hexlet</a></p>
