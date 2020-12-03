@@ -1,14 +1,15 @@
 # brain-games
 Simple math games bundle.
+
 ![Actions Status](https://github.com/vvvhatislove/frontend-project-lvl1/workflows/hexlet-check/badge.svg)
 ![Linter](https://github.com/vvvhatislove/frontend-project-lvl1/workflows/Linter/badge.svg)
 [![Maintainability](https://api.codeclimate.com/v1/badges/1f6e3b1985ef9c74049e/maintainability)](https://codeclimate.com/github/vvvhatislove/frontend-project-lvl1/maintainability)
 
 <p>
-  <a href="#how-to-use">How To Use</a>
-</p>  
+  • <a href="#how-to-use">How To Use</a>
+</p>
 <p>
-  <a href="#games">Games</a>
+  • <a href="#games">Games</a>
     <ul>
       <li>brain-even</li>
       <li>brain-calc</li>
@@ -18,8 +19,7 @@ Simple math games bundle.
     </ul>
 </p>
 <p>
-  <a href="#how-to-add-new-game">How To Add New Game</a>
-</p>
+  • <a href="#credits">Credits</a>
 
 ## How To Use
 Run these commands from your command line:
@@ -42,6 +42,7 @@ $ # command
 ```
 
 ## Games
+In every game after greeting player has to give an answer to a certain question. In order to win player has to give three correct answers in a row. If the answer is incorrect, the game ends.
 
 ### brain-even
 Player has to answer whether the given number is even or not.
@@ -49,15 +50,15 @@ Player has to answer whether the given number is even or not.
 # Run this command to start the game.
 $ brain-even
 ```
-[![asciicast](https://asciinema.org/a/RGXNaf4LkBnw5Pc13XqtRN69o.svg)](https://asciinema.org/a/RGXNaf4LkBnw5Pc13XqtRN69o)
+[![asciicast](https://asciinema.org/a/Rz6aMb0ncoxxhAKE3hh5kSJz8.svg)](https://asciinema.org/a/Rz6aMb0ncoxxhAKE3hh5kSJz8)
 
 ### brain-calc
-Player has to solve the given arithmetic expression.
+Player has to solve the given arithmetic expression ('+', '-', '*').
 ```bash
 # Run this command to start the game.
 $ brain-calc
 ```
-
+[![asciicast](https://asciinema.org/a/Xa9DZv2sLGuubyiDTVBegGXYh.svg)](https://asciinema.org/a/Xa9DZv2sLGuubyiDTVBegGXYh)
 
 ### brain-gcd
 Player has to find the greatest common divisor of given numbers.
@@ -65,7 +66,7 @@ Player has to find the greatest common divisor of given numbers.
 # Run this command to start the game.
 $ brain-gcd
 ```
-
+[![asciicast](https://asciinema.org/a/akkz8Ff2usmgWKMyTZm2kP64d.svg)](https://asciinema.org/a/akkz8Ff2usmgWKMyTZm2kP64d)
 
 ### brain-progression
 Player has to guess the missing element in an arithmetic progression.
@@ -73,7 +74,7 @@ Player has to guess the missing element in an arithmetic progression.
 # Run this command to start the game.
 $ brain-progression
 ```
-
+[![asciicast](https://asciinema.org/a/fhGDzjt9HD1KMIJoWQegy2lgo.svg)](https://asciinema.org/a/fhGDzjt9HD1KMIJoWQegy2lgo)
 
 ### brain-prime
 Player has to answer whether the given number is prime or not.
@@ -81,14 +82,10 @@ Player has to answer whether the given number is prime or not.
 # Run this command to start the game.
 $ brain-prime
 ```
+[![asciicast](https://asciinema.org/a/IIOw1cyRzYVXKVBJiB2uZcrFn.svg)](https://asciinema.org/a/IIOw1cyRzYVXKVBJiB2uZcrFn)
 
-
-Asciinema brain-even link: https://asciinema.org/a/ghKKOX45rxr0QfQI5P6DyBpIy
-
-Asciinema brain-calc link: https://asciinema.org/a/YKmL52GOg2kh6BF5T3eLwRik9
-
-Asciinema brain-gcd link: https://asciinema.org/a/yY8A2fnZBc5VpQ4RrLCyKTO0R
-
-Asciinema brain-progression link: https://asciinema.org/a/w163QVsiMYTUrl6gig4UTRI9Y
-
-Asciinema brain-prime link: https://asciinema.org/a/VAo2bOrAIyYIJ8fWQFvvefy0q
+## Credits
+This game bundle was created as my first project during my Hexlet "Frontend-developer" education course.
+<img src = "https://cdn2.hexlet.io/assets/hexlet_logo_wide-7e3d6b16dd0882a7657fe79022c2603fdcd53d1744350febc34fba436e282ae7.png" 
+alt="Hexlet logo" width="500" length="500">
+https://en.hexlet.io/pages/about
