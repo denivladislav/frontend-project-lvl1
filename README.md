@@ -53,7 +53,7 @@ $ brain-even
 [![asciicast](https://asciinema.org/a/Rz6aMb0ncoxxhAKE3hh5kSJz8.svg)](https://asciinema.org/a/Rz6aMb0ncoxxhAKE3hh5kSJz8)
 
 ### brain-calc
-Player has to solve the given arithmetic expression ('+', '-', '*').
+Player has to solve the given arithmetic expression (+, -, ×).
 ```bash
 # Run this command to start the game.
 $ brain-calc
