@@ -1,8 +1,8 @@
 # brain-games
 Simple math games bundle.
 
-![Actions Status](https://github.com/vvvhatislove/frontend-project-lvl1/workflows/hexlet-check/badge.svg)
-![Linter](https://github.com/vvvhatislove/frontend-project-lvl1/workflows/Linter/badge.svg)
+[![Actions Status](https://github.com/vvvhatislove/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/vvvhatislove/frontend-project-lvl1/actions?query=workflow%3Ahexlet-check)
+[![Linter](https://github.com/vvvhatislove/frontend-project-lvl1/workflows/Linter/badge.svg)](https://github.com/vvvhatislove/frontend-project-lvl1/actions?query=workflow%3ALinter)
 [![Maintainability](https://api.codeclimate.com/v1/badges/1f6e3b1985ef9c74049e/maintainability)](https://codeclimate.com/github/vvvhatislove/frontend-project-lvl1/maintainability)
 
 <p>
