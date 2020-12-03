@@ -42,7 +42,7 @@ $ # command
 ```
 
 ## Games
-In every game after greeting player has to give an answer to a certain question. In order to win player has to give three correct answers in a row. If the answer is incorrect, the game ends.
+In every game after greeting player has to give an answer to a certain question. In order to win player has to give three correct answers in a row. If the answer is incorrect, the game ends and player has to start again.
 
 ### brain-even
 Player has to answer whether the given number is even or not.
@@ -88,4 +88,5 @@ $ brain-prime
 This game bundle was created as my first project during my Hexlet "Frontend-developer" education course.
 <img src = "https://cdn2.hexlet.io/assets/hexlet_logo_wide-7e3d6b16dd0882a7657fe79022c2603fdcd53d1744350febc34fba436e282ae7.png" 
 alt="Hexlet logo" width="500" length="500">
+
 https://en.hexlet.io/pages/about
