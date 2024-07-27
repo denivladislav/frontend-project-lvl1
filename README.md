@@ -1,5 +1,5 @@
 # brain-games
-Simple math games bundle.
+Math games bundle.
 
 [![Actions Status](https://github.com/vvvhatislove/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/vvvhatislove/frontend-project-lvl1/actions?query=workflow%3Ahexlet-check)
 [![Linter](https://github.com/vvvhatislove/frontend-project-lvl1/workflows/Linter/badge.svg)](https://github.com/vvvhatislove/frontend-project-lvl1/actions?query=workflow%3ALinter)
